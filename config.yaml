@@ -1,0 +1,16 @@
+Certify:
+
+  template : /home/levi/Downloads/UI Certificate.pptx
+
+  data: test.csv
+
+  save_location : /home/levi/Documents/test
+
+  variables:
+    Full Name : Name
+    email: Email
+
+  sent_email : True
+
+  # content: text.txt
+  # subject : Workshop on UI Design Certificate - REG

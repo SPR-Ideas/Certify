@@ -1,16 +1,16 @@
 Certify:
 
-  template : /home/levi/Downloads/UI Certificate.pptx
+  template : /home/levi/Downloads/UI Certificate.pptx # location of the certificate template.pptx
 
-  data: test.csv
+  data: test.csv # location of the csv file.
 
-  save_location : /home/levi/Documents/test
+  save_location : /home/levi/Documents/test # path where the location to be saved.
 
-  variables:
+  variables:  # these are variables
     Full Name : Name
     email: Email
 
-  sent_email : True
+  # sent_email : True # It is a optional feild default is false.
 
-  # content: text.txt
-  # subject : Workshop on UI Design Certificate - REG
+  # content: text.txt  # path where the Body of the email is present [only .txt file.]
+  # subject : Testin Mail

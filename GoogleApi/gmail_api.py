@@ -40,7 +40,7 @@ def check_credential():
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            file_name = input("Enter the credentials.json file location")
+            file_name = input("Enter the credentials.json file location : ")
             if os.path.exists(file_name):
                 flow = InstalledAppFlow.from_client_secrets_file(
                     file_name, SCOPES)

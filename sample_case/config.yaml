@@ -1,0 +1,13 @@
+Certify:
+  template: /home/levi/Downloads/FIP.pptx
+  data: /home/levi/Downloads/FIP.csv
+  save_location: certificates/
+
+  variables:
+    Full Name: Name
+    email: Email
+
+  sent_email : True # It is a optional feild default is false.
+
+  content: text.txt  # path where the Body of the email is present [only .txt file.]
+  subject : certificates for FIP

@@ -175,7 +175,7 @@ def start(templates,csv_file,mapped_values,save_dir):
         save_dir
         )
     # print(time.time()-st)
-    # print(MAPPED_LOG)
+    print(MAPPED_LOG)
 
 
 def progression_bar(percentage):

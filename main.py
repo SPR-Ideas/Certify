@@ -4,7 +4,8 @@ import yaml
 from certify import start , MAPPED_LOG , CERTIFCATE_DIR ,error , get_details
 import os
 from GoogleApi.gmail_api import  send_mail_for_participants
-YAML = "config.yaml"
+YAML = "sample_case/config.yaml"
+
 
 def read_config():
     data : dict
@@ -29,6 +30,7 @@ def make_certificate(data):
     data['save_location']
     )
     # CERTIFCATE_DIR  = data["save_location"]
+
 
 def mail_wapper(raw_data,subject,content_file):
 
@@ -59,6 +61,7 @@ def make_dynamic_content(raw_data,content,mapped_values,csv_file):
         count+=1
 
     return raw_data
+
 
 
 def compile_config(file=YAML):
@@ -116,12 +119,12 @@ def assign_task():
     """
 
     data = compile_config()
-    if "Certify" in data:
-        mail_data = data['Certify']
-        make_certificate(mail_data)
-        if "sent_email" in mail_data:
+    if data:
+        # mail_data = data['Certify']
+        make_certificate(data)
+        if "sent_email" in data:
 
-            if mail_data["sent_email"]:
+            if data["sent_email"]:
                 raw_data = {}
                 counter =1
 
@@ -129,10 +132,18 @@ def assign_task():
                     raw_data[counter] = [key,value]
                     counter+=1
 
-                mail_wapper(raw_data , mail_data['subject'],mail_data['content'])
+                mail_wapper(raw_data , data['subject'],data['content'])
 
+
+
+def run_sand_box():
+    global YAML
+    YAML = "sample_case/config.yaml"
+    data = compile_config()
+    # print(data)
+    make_certificate(data)
 
 
 if __name__ == "__main__":
     assign_task()
-    # compile_config()
+    # run_sand_box()

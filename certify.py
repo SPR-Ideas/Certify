@@ -244,7 +244,6 @@ def show_progression():
         progression_bar(percentage)
         des_list = ls_dir(CERTIFCATE_DIR)
 
-
 # if __name__ == "__main__":
 #     start(
 #         "templates/templates.pptx",
